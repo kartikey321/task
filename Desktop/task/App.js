@@ -18,12 +18,10 @@ function HomeScreen({ navigation }) {
   
  
  function validate_field(){    
-    if(username!="admin"){
-      alert("username wrong")
+    if(username!="admin" || password!="admin@123"){
+      alert(" wrong credentials")
     }
-    if(password!="admin@123"){
-      alert("password wrong")
-    }
+    
     else {
       navigation.navigate('Details')
     }
@@ -119,7 +117,7 @@ function NameScreen(route){
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center',  backgroundColor: '#12B2F3', padding:20 }}>
       
-  <Text style={{fontSize:30,  flex: 1, alignItems: 'center', justifyContent: 'center', fontStyle:'italic' }}>Congratulations {route.route.params.fullname} you are sucessfully registered</Text>
+  <Text style={{fontSize:30,  flex: 1, alignItems: 'center', justifyContent: 'center', fontStyle:'italic' }}>Congratulations {route.route.params.fullname} you are sucessfully registered!</Text>
     </View>
   );
 }
